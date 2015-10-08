@@ -1,4 +1,9 @@
 {
+  "hooks": {
+    "frontend": false,
+    "pubsub": false,
+    "grunt": false
+  },
   "generators": {
     "modules": {}
   }
