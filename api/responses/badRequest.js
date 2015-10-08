@@ -46,7 +46,7 @@ module.exports = function badRequest(message, data, error) {
 
   var response = {
     status: 400,
-    message: (message != undefined && message !== null)?message:'404 Not Found',
+    message: (message != undefined && message !== null)?message:'400 Bad Request',
     data: (data != undefined && data !== null)?data:{}
   };
 

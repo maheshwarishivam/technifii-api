@@ -43,7 +43,7 @@ module.exports = function forbidden (message, data, error) {
 
   var response = {
     status: 403,
-    message: (message != undefined && message !== null)?message:'404 Not Found',
+    message: (message != undefined && message !== null)?message:'403 Forbidden',
     data: (data != undefined && data !== null)?data:{}
   };
 

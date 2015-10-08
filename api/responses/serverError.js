@@ -42,7 +42,7 @@ module.exports = function serverError (message, data, error) {
 
   var response = {
     status: 500,
-    message: (message != undefined && message !== null)?message:'404 Not Found',
+    message: (message != undefined && message !== null)?message:'500 Server Error',
     data: (data != undefined && data !== null)?data:{}
   };
 
@@ -52,6 +52,5 @@ module.exports = function serverError (message, data, error) {
 
   //always respond with JSON
   return res.jsonx(response);
-
 };
 
