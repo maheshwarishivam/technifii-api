@@ -10,7 +10,34 @@
  * http://sailsjs.org/#!/documentation/concepts/Logging
  */
 
+/****************************************************************************
+ *                                                                          *
+ * Use winston to log to file.                                              *
+ *                                                                          *
+ ****************************************************************************/
+
+var winston = require('winston');
+
+var applicationLogger = new winston.Logger({
+  transports: [
+    new winston.transports.DailyRotateFile({
+      filename: 'logs/application',
+      handleExceptions: true,
+      json: true,
+      maxsize: 5242880, //5MB
+      tailable: true,
+      zippedArchive: true,
+      maxFiles: 50,
+      colorize: false,
+      datePattern: '-yyyyMMdd.log'
+    })
+  ],
+  exitOnError: false
+});
+
 module.exports.log = {
+
+  custom: applicationLogger,
 
   /***************************************************************************
   *                                                                          *
