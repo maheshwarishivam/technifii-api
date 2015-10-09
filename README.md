@@ -1,3 +1,3 @@
 # technifiiapi
 
-a [Sails](http://sailsjs.org) application
+Boilerplate API Framework written in NodeJS using [SailsJS](http://www.sailsjs.org)
