@@ -3,7 +3,7 @@ module.exports.requestloggerfile = {
   // and off for production, using the default format
   format: ':remote-addr - [:date[clf]] ":method :url" :status :response-time ms ":user-agent"',
   logLocation: 'rotateFile',
-  fileLocation: 'logs/access-%DATE%.log',
+  fileLocation: 'logs/access.log',
   inDevelopment: true,
   inProduction: true,
   fileRotationOptions: {
